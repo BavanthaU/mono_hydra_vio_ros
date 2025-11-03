@@ -115,7 +115,7 @@ Visualization Manager:
       Transport Hint: raw
       Unreliable: false
       Value: true
-    - Class: mesh_rviz_plugins/TexturedMesh
+    - Class: rviz_mesh_plugin/TriangleMesh
       Enabled: true
       Name: 3D Mesh Textured
       Normal Size: 0.05000000074505806

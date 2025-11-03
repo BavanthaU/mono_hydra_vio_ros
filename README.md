@@ -41,6 +41,12 @@ When you publish results with this fork, cite the Kimera papers and the Mono-Hyd
 3. Launch one of the dataset-specific bring-up files, e.g.
    `roslaunch mono_hydra_vio_ros kimera_vio_ros_realsense_rgbd.launch`.
 
+   > **Note:** Kimera-VIO-ROS logs frontend/backend summaries under
+   > `mono_hydra_vio_ros/output_logs/<config_name>/`. If you introduce a new
+   > configuration (for example, `RealSense_RGBD_sp`), create the matching
+   > subfolder in `output_logs/` ahead of time so the CSV writers can open their
+   > files.
+
 ## Acknowledgements
 
 Maintained by **Bavantha Udugama** for the Mono-Hydra project. Many thanks to
