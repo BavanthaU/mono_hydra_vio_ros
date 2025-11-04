@@ -5,7 +5,7 @@
  * @author Marcus Abate
  */
 
-#include "kimera_vio_ros/RosBagDataProvider.h"
+#include "mono_hydra_vio_ros/RosBagDataProvider.h"
 
 #include <glog/logging.h>
 
@@ -13,7 +13,7 @@
 
 #include <kimera-vio/pipeline/Pipeline-definitions.h>
 
-#include "kimera_vio_ros/utils/UtilsRos.h"
+#include "mono_hydra_vio_ros/utils/UtilsRos.h"
 
 namespace VIO {
 

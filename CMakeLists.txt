@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(kimera_vio_ros)
+project(mono_hydra_vio_ros)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -21,15 +21,15 @@ catkin_simple()
 
 cs_add_library(${PROJECT_NAME}
   # Include files are just here for IDEs
-  include/kimera_vio_ros/KimeraVioRos.h
-  include/kimera_vio_ros/RosBagDataProvider.h
-  include/kimera_vio_ros/RosDataProviderInterface.h
-  include/kimera_vio_ros/RosDisplay.h
-  include/kimera_vio_ros/RosOnlineDataProvider.h
-  include/kimera_vio_ros/RosPublishers.h
-  include/kimera_vio_ros/RosVisualizer.h
-  include/kimera_vio_ros/utils/UtilsRos.h
-  include/kimera_vio_ros/utils/CsvPublisher.h
+  include/mono_hydra_vio_ros/KimeraVioRos.h
+  include/mono_hydra_vio_ros/RosBagDataProvider.h
+  include/mono_hydra_vio_ros/RosDataProviderInterface.h
+  include/mono_hydra_vio_ros/RosDisplay.h
+  include/mono_hydra_vio_ros/RosOnlineDataProvider.h
+  include/mono_hydra_vio_ros/RosPublishers.h
+  include/mono_hydra_vio_ros/RosVisualizer.h
+  include/mono_hydra_vio_ros/utils/UtilsRos.h
+  include/mono_hydra_vio_ros/utils/CsvPublisher.h
   src/KimeraVioRos.cpp
   src/RosDataProviderInterface.cpp
   src/RosBagDataProvider.cpp

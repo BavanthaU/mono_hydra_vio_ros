@@ -10,9 +10,9 @@
   <arg name="camera_ns" default=""/>
   <arg name="use_lcd" default="true"/>
 
-  <arg name="log_path" value="$(find kimera_vio_ros)/output_logs/$(arg dataset_name)"/>
+  <arg name="log_path" value="$(find mono_hydra_vio_ros)/output_logs/$(arg dataset_name)"/>
 
-  <include file="$(find kimera_vio_ros)/launch/kimera_vio_ros.launch" pass_all_args="true">
+  <include file="$(find mono_hydra_vio_ros)/launch/mono_hydra_vio_ros.launch" pass_all_args="true">
       <!-- Options -->
       <arg name="include_pipeline_flags" value="true"/>
       <arg name="viz_type" value="1"/>

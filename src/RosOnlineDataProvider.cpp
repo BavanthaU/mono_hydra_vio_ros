@@ -5,7 +5,7 @@
  * @author Marcus Abate
  */
 
-#include "kimera_vio_ros/RosOnlineDataProvider.h"
+#include "mono_hydra_vio_ros/RosOnlineDataProvider.h"
 
 #include <string>
 #include <vector>
@@ -17,7 +17,7 @@
 #include <std_msgs/Bool.h>
 #include <tf2_ros/static_transform_broadcaster.h>
 
-#include "kimera_vio_ros/utils/UtilsRos.h"
+#include "mono_hydra_vio_ros/utils/UtilsRos.h"
 
 namespace VIO {
 

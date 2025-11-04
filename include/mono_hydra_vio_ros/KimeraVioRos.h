@@ -10,11 +10,11 @@
 #include <kimera-vio/pipeline/Pipeline.h>
 #include <kimera-vio/utils/Macros.h>
 
-#include "kimera_vio_ros/RosDataProviderInterface.h"
-#include "kimera_vio_ros/RosDisplay.h"
-#include "kimera_vio_ros/RosVisualizer.h"
-#include "kimera_vio_ros/RosLoopClosureVisualizer.h"
-#include "kimera_vio_ros/LcdRegistrationServer.h"
+#include "mono_hydra_vio_ros/RosDataProviderInterface.h"
+#include "mono_hydra_vio_ros/RosDisplay.h"
+#include "mono_hydra_vio_ros/RosVisualizer.h"
+#include "mono_hydra_vio_ros/RosLoopClosureVisualizer.h"
+#include "mono_hydra_vio_ros/LcdRegistrationServer.h"
 
 namespace VIO {
 

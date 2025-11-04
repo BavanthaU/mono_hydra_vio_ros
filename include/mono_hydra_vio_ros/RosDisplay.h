@@ -12,7 +12,7 @@
 
 #include <kimera-vio/visualizer/Display.h>
 
-#include "kimera_vio_ros/RosPublishers.h"
+#include "mono_hydra_vio_ros/RosPublishers.h"
 
 namespace VIO {
 

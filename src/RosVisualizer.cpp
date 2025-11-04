@@ -4,7 +4,7 @@
  * images at any rate (frame rate, keyframe rate,...).
  * @author Antoni Rosinol
  */
-#include "kimera_vio_ros/RosVisualizer.h"
+#include "mono_hydra_vio_ros/RosVisualizer.h"
 
 #include <cv_bridge/cv_bridge.h>
 #include <geometry_msgs/TransformStamped.h>
@@ -29,7 +29,7 @@
 
 #include <string>
 
-#include "kimera_vio_ros/utils/UtilsRos.h"
+#include "mono_hydra_vio_ros/utils/UtilsRos.h"
 
 DECLARE_int32(viz_type);
 

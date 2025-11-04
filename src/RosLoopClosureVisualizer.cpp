@@ -4,7 +4,7 @@
  * @author Yun Chang
  */
 
-#include "kimera_vio_ros/RosLoopClosureVisualizer.h"
+#include "mono_hydra_vio_ros/RosLoopClosureVisualizer.h"
 
 #include <string>
 
@@ -23,7 +23,7 @@
 #include <kimera-vio/loopclosure/LoopClosureDetector-definitions.h>
 #include <kimera-vio/pipeline/QueueSynchronizer.h>
 
-#include "kimera_vio_ros/utils/UtilsRos.h"
+#include "mono_hydra_vio_ros/utils/UtilsRos.h"
 
 namespace VIO {
 

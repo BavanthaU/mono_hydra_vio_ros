@@ -5,7 +5,7 @@
  * @author Marcus Abate
  */
 
-#include "kimera_vio_ros/RosDataProviderInterface.h"
+#include "mono_hydra_vio_ros/RosDataProviderInterface.h"
 
 #include <string>
 #include <vector>

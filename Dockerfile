@@ -18,7 +18,7 @@ RUN git clone https://github.com/BavanthaU/mono_hydra_vio_ros.git /catkin_ws/src
 RUN cd /catkin_ws/src/mono_hydra_vio_ros
     # && git checkout ___
 RUN cd /catkin_ws/src/ && wstool init && \
-    wstool merge mono_hydra_vio_ros/install/kimera_vio_ros_https.rosinstall && wstool update
+    wstool merge mono_hydra_vio_ros/install/mono_hydra_vio_ros_https.rosinstall && wstool update
 
 # Build catkin workspace
 RUN apt-get install -y ros-noetic-image-pipeline ros-noetic-geometry ros-noetic-rviz

@@ -1,7 +1,7 @@
 # You need to run a roscore before running this script.
 # Otw, the roslaunch command will not return...
 # To kill this script: 1. Ctrl+Z 2. kill %%
-KIMERA_VIO_ROS_PATH="$HOME/Code/ROS/kimera_ws/src/mono_hydra_vio_ros/"
+MONO_HYDRA_VIO_ROS_PATH="$HOME/Code/ROS/kimera_ws/src/mono_hydra_vio_ros/"
 DATASET_PATH="$HOME/datasets/uHumans2/"
 CSV_PATH="$HOME/Documents/uHumans2_VIO/"
 
@@ -35,12 +35,12 @@ do
     # TODO(Toni): do this in batch... read multiple csvs, and log them all to the rosbag
     echo "Writing VIO tf."
     DVIO_TRAJ_CSV="${CSV_PATH}/${ROSBAG}/$PARAM/traj_vio.csv"
-    python $KIMERA_VIO_ROS_PATH/scripts/write_tfs_in_rosbag.py "$ROSBAG_PATH" "$DVIO_TRAJ_CSV" --base_link_frame_id "base_link_${PARAM}"
+    python $MONO_HYDRA_VIO_ROS_PATH/scripts/write_tfs_in_rosbag.py "$ROSBAG_PATH" "$DVIO_TRAJ_CSV" --base_link_frame_id "base_link_${PARAM}"
     echo "Done writing VIO tf."
 
     echo "Writing PGO tf."
     PGO_TRAJ_CSV="${CSV_PATH}/${ROSBAG}/$PARAM/traj_pgo.csv"
-    python $KIMERA_VIO_ROS_PATH/scripts/write_tfs_in_rosbag.py "$ROSBAG_PATH" "$PGO_TRAJ_CSV" --base_link_frame_id "base_link_${PARAM}_pgo"
+    python $MONO_HYDRA_VIO_ROS_PATH/scripts/write_tfs_in_rosbag.py "$ROSBAG_PATH" "$PGO_TRAJ_CSV" --base_link_frame_id "base_link_${PARAM}_pgo"
     echo "Done writing PGO tf."
 
   done

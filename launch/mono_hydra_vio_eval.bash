@@ -20,17 +20,17 @@ for ROSBAG in $ROSBAGS
 do
   ROSBAG_PATH="${DATASET_PATH}${ROSBAG}.bag"
 
-  roslaunch kimera_vio_ros kimera_vio_ros_tesse.launch dataset_name:="5pt" &
+  roslaunch mono_hydra_vio_ros mono_hydra_vio_ros_tesse.launch dataset_name:="5pt" &
   sleep 10
   rosbag play $ROSBAG_PATH
   cp -r $LOGS_PATH "$OUTPUT_PATH/5pt/$ROSBAG"
 
-  roslaunch kimera_vio_ros kimera_vio_ros_tesse.launch dataset_name:="2pt"
+  roslaunch mono_hydra_vio_ros mono_hydra_vio_ros_tesse.launch dataset_name:="2pt"
   sleep 10
   rosbag play $ROSBAG_PATH
   cp -r $LOGS_PATH "$OUTPUT_PATH/2pt/$ROSBAG"
 
-  roslaunch kimera_vio_ros kimera_vio_ros_tesse.launch dataset_name:="DVIO"
+  roslaunch mono_hydra_vio_ros mono_hydra_vio_ros_tesse.launch dataset_name:="DVIO"
   sleep 10
   rosbag play $ROSBAG_PATH
   cp -r $LOGS_PATH "$OUTPUT_PATH/DVIO/$ROSBAG"

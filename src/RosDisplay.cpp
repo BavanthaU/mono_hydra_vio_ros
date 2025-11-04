@@ -4,7 +4,7 @@
  * images at any rate (frame rate, keyframe rate,...).
  * @author Antoni Rosinol
  */
-#include "kimera_vio_ros/RosDisplay.h"
+#include "mono_hydra_vio_ros/RosDisplay.h"
 
 #include <string>
 
@@ -16,8 +16,8 @@
 
 #include <kimera-vio/visualizer/Display.h>
 
-#include "kimera_vio_ros/RosPublishers.h"
-#include "kimera_vio_ros/utils/UtilsRos.h"
+#include "mono_hydra_vio_ros/RosPublishers.h"
+#include "mono_hydra_vio_ros/utils/UtilsRos.h"
 
 namespace VIO {
 

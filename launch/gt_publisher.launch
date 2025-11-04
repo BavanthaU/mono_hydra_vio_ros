@@ -1,10 +1,10 @@
 <launch>
   <arg name="dataset_path"  default="/home/tonirv/datasets/EuRoC/MH_05_difficult"/>
-  <arg name="input_odometry" default="/kimera_vio_ros/odometry"/>
+  <arg name="input_odometry" default="/mono_hydra_vio_ros/odometry"/>
 
   <!-- Assumes we have the same data directory than Euroc, since we use EurocDataProvider-->
   <!-- launch-prefix="gdb -ex run -args"-->
-  <node name="ground_truth_publisher" pkg="kimera_vio_ros" type="csv_publisher_node" output="screen"
+  <node name="ground_truth_publisher" pkg="mono_hydra_vio_ros" type="csv_publisher_node" output="screen"
     args="--logtostderr=1
           --colorlogtostderr=1
           --dataset_path=$(arg dataset_path)

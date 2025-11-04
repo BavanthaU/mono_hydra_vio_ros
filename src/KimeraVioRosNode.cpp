@@ -8,7 +8,7 @@
 
 #include <ros/ros.h>
 
-#include "kimera_vio_ros/KimeraVioRos.h"
+#include "mono_hydra_vio_ros/KimeraVioRos.h"
 
 int main(int argc, char* argv[]) {
   // Initialize Google's flags library.
@@ -17,10 +17,10 @@ int main(int argc, char* argv[]) {
   google::InitGoogleLogging(argv[0]);
 
   // Initialize ROS node.
-  ros::init(argc, argv, "kimera_vio");
+  ros::init(argc, argv, "mono_hydra_vio");
 
   // Initialize VIO pipeline and ROS data provider.
-  VIO::KimeraVioRos kimera_vio_ros;
+  VIO::KimeraVioRos mono_hydra_vio_ros;
 
-  return kimera_vio_ros.runKimeraVio() ? EXIT_SUCCESS : EXIT_FAILURE;
+  return mono_hydra_vio_ros.runKimeraVio() ? EXIT_SUCCESS : EXIT_FAILURE;
 }

@@ -18,7 +18,7 @@ Note: Only 1. and 2. are necessary if you want to use the default calibration an
 	- Calibrate camera intrinsics and extrinsics using [Kalibr](https://github.com/ethz-asl/kalibr) 
 	- Convert the intrinsics and extrinsics to configuration files for mono_hydra_vio_ros wrapper using [Kalibr2KimeraVIO-pinhole-radtan](https://github.com/BavanthaU/mono_hydra_vio/tree/master/kalibr/config2kimeravio.py).
 
-4. Create/adapt your own specific launch file, or use the [example RealSense D435i file](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/launch/kimera_vio_ros_realsense_IR.launch).
+4. Create/adapt your own specific launch file, or use the [example RealSense D435i file](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/launch/mono_hydra_vio_ros_realsense_IR.launch).
 
 ### Testing
 Each command will require its own terminal.
@@ -33,9 +33,9 @@ Each command will require its own terminal.
 	1. Disable the emitter after the RealSense node is up using ```rosrun dynamic_reconfigure dynparam set /camera/stereo_module emitter_enabled 0```
 	2. Physically cover the emitter on the RealSense with a piece of tape.
 
-4. Launch mono_hydra_vio ROS wrapper using ```roslaunch kimera_vio_ros kimera_vio_ros_realsense_IR.launch``` where `kimera_vio_ros_realsense_IR.launch` can be repaced with your launch file.
+4. Launch mono_hydra_vio ROS wrapper using ```roslaunch mono_hydra_vio_ros mono_hydra_vio_ros_realsense_IR.launch``` where `mono_hydra_vio_ros_realsense_IR.launch` can be repaced with your launch file.
 
-5. Visualize trajectory with RVIZ using ```rviz -d $(rospack find kimera_vio_ros)/rviz/kimera_vio_euroc.rviz```, where [kimera_vio_euroc.rviz](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/rviz/kimera_vio_euroc.rviz) can be repaced with your rviz setup file.
+5. Visualize trajectory with RVIZ using ```rviz -d $(rospack find mono_hydra_vio_ros)/rviz/mono_hydra_vio_euroc.rviz```, where [mono_hydra_vio_euroc.rviz](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/rviz/mono_hydra_vio_euroc.rviz) can be repaced with your rviz setup file.
 
 6. Visualize state and statistics using ```rqt_multiplot```, [(see example config)](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/cfg/viz/rqt_multiplot_state.xml)
 
@@ -53,7 +53,7 @@ It is important to remember that when launching the VIO, the camera should be st
 
 4. Create configuration files for mono_hydra_vio_ros wrapper using [Kalibr2KimeraVIO-pinhole-equi](https://github.com/BavanthaU/mono_hydra_vio/tree/master/kalibr/config2kimeravio.py) (or pinholde-radtan)
 
-5. Create/adapt your own specific launch file, similar to [example MyntEye S](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/launch/kimera_vio_ros_mynteye.launch)
+5. Create/adapt your own specific launch file, similar to [example MyntEye S](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/launch/mono_hydra_vio_ros_mynteye.launch)
 
 ### Testing
 
@@ -63,7 +63,7 @@ It is important to remember that when launching the VIO, the camera should be st
 
 3. Launch mono_hydra_vio_ros wrapper using ```roslaunch spark_vio_ros [name of your launch file]``` (example, see below)
 
-4. Visualize trajectory with RVIZ using ```rviz```, [(see example config)](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/rviz/kimera_vio_euroc.rviz)
+4. Visualize trajectory with RVIZ using ```rviz```, [(see example config)](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/rviz/mono_hydra_vio_euroc.rviz)
 
 5. Visualize state and statistics using ```rqt_multiplot```, [(see example config)](https://github.com/BavanthaU/mono_hydra_vio_ros/tree/master/cfg/viz/rqt_multiplot_state.xml)
 
@@ -76,4 +76,3 @@ roslaunch spark_vio_ros spark_vio_ros_mynteye.launch camera:=JPL distortion:=equ
 Options for camera are ```MIT``` and ```JPL```. Options for distortion are ```equidistant``` and ```radtan```.
 
 Same goes for use offline, using the ```spark_vio_ros_mynteye_offline.launch``` file and an additional ```data``` argument with path to bagfile.
-

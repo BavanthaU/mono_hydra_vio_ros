@@ -25,7 +25,7 @@ file and include this one to launch KimeraVIO on the dataset of your choice -->
        'log_output_path' location. -->
   <arg name="log_output" default="false"/>
   <arg name="log_output_path"
-       default="$(find kimera_vio_ros)/output_logs/"/>
+       default="$(find mono_hydra_vio_ros)/output_logs/"/>
   <!-- If true, log ground-truth poses to a csv file using the
        Logger utils (if online is true) or rosbag (if online is false),
        and processing data from the gt_topic rostopic -->
@@ -119,8 +119,8 @@ file and include this one to launch KimeraVIO on the dataset of your choice -->
   <arg name="glog_args" value="--logtostderr=1" unless="$(arg glog_to_dir)"/>
 
   <!-- Launch main node  -->
-  <node name="kimera_vio_ros_node" pkg="kimera_vio_ros" type="kimera_vio_ros_node"
-        output="screen" ns="kimera_vio_ros"
+  <node name="mono_hydra_vio_ros_node" pkg="mono_hydra_vio_ros" type="mono_hydra_vio_ros_node"
+        output="screen" ns="mono_hydra_vio_ros"
         launch-prefix="$(arg launch_prefix)"
         required="$(arg close_on_error)"
         args="--use_lcd=$(arg use_lcd)
@@ -238,7 +238,7 @@ file and include this one to launch KimeraVIO on the dataset of your choice -->
   <include unless="$(arg multirobot)" file="$(find pose_graph_tools_ros)/launch/posegraph_view.launch" >
     <arg name="frame_id"      value="$(arg map_frame_id)" />
     <arg name="graph_topic"   value="pose_graph" />
-    <arg name="ns"            value="kimera_vio_ros"/>
+    <arg name="ns"            value="mono_hydra_vio_ros"/>
   </include>
 
 </launch>

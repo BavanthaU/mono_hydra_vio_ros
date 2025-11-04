@@ -21,7 +21,7 @@
 #include <sensor_msgs/Imu.h>
 
 #include <kimera-vio/pipeline/Pipeline-definitions.h>
-#include "kimera_vio_ros/RosDataProviderInterface.h"
+#include "mono_hydra_vio_ros/RosDataProviderInterface.h"
 
 namespace VIO {
 

@@ -10,7 +10,7 @@
   <arg name="left_cam_info_topic"  value="/tesse/left_cam/camera_info"/>
   <arg name="right_cam_info_topic" value="/tesse/right_cam/camera_info"/>
 
-  <node pkg="kimera_vio_ros" type="camera_info_yamlizer_node.py"
+  <node pkg="mono_hydra_vio_ros" type="camera_info_yamlizer_node.py"
         name="cam_info_yamelizer" output="screen">
     <param name="base_link_frame_id" value="$(arg base_link_frame_id)"/>
     <param name="left_cam_frame_id"  value="$(arg left_cam_frame_id)"/>

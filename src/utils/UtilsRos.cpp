@@ -4,7 +4,7 @@
  * @author Antoni Rosinol
  */
 
-#include "kimera_vio_ros/utils/UtilsRos.h"
+#include "mono_hydra_vio_ros/utils/UtilsRos.h"
 
 #include <string>
 

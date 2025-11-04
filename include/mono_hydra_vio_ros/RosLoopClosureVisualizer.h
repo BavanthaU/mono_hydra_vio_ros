@@ -34,7 +34,7 @@
 #include <kimera-vio/loopclosure/LoopClosureDetector.h>
 #include <kimera-vio/mesh/Mesher-definitions.h>
 
-#include "kimera_vio_ros/RosPublishers.h"
+#include "mono_hydra_vio_ros/RosPublishers.h"
 
 namespace VIO {
 

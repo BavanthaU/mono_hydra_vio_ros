@@ -1,5 +1,5 @@
 <launch>
-  <arg name="dataset_name" value="ZEDXMono_RGBD"/>
+  <arg name="dataset_name" value="RealSense_RGBD_sp"/>
 
   <arg name="online" default="true" />
   <arg name="log_output" default="true"/>
@@ -15,9 +15,9 @@
   <arg name="left_cam_frame_id"  default="left_cam_kimera"/>
   <arg name="right_cam_frame_id" default="right_cam_kimera"/>
 
-  <arg name="log_path" value="$(find kimera_vio_ros)/output_logs/$(arg dataset_name)"/>
+  <arg name="log_path" value="$(find mono_hydra_vio_ros)/output_logs/$(arg dataset_name)"/>
 
-  <include file="$(find kimera_vio_ros)/launch/kimera_vio_ros.launch" pass_all_args="true">
+  <include file="$(find mono_hydra_vio_ros)/launch/mono_hydra_vio_ros.launch" pass_all_args="true">
       <!-- Options -->
       <arg name="include_pipeline_flags" value="true"/>
       <arg name="viz_type" value="0"/>
@@ -28,9 +28,9 @@
       <arg name="log_gt_data" value="false"/>
       <arg if="$(arg log_output)" name="log_output_path" value="$(arg log_path)"/>
       <!-- Subscribed Topics -->
-      <arg name="left_cam_topic"      default="/zed/zed_node/rgb/rect/image"/>
+      <arg name="left_cam_topic"      default="/camera/color/image_raw"/>
       <arg name="depth_cam_topic" default="/camera/depth_cam/image_raw"/>
-      <arg name="imu_topic"           default="/zed/zed_node/imu/data"/>
+      <arg name="imu_topic"           default="/camera/imu"/>
       <!-- Only used when parsing a rosbag -->
       <!-- <arg name="odom_frame_id"     value="world"/>
       <arg name="base_link_frame_id" value="base_link"/>

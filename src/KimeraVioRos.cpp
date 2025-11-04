@@ -4,7 +4,7 @@
  * @author Marcus Abate
  */
 
-#include "kimera_vio_ros/KimeraVioRos.h"
+#include "mono_hydra_vio_ros/KimeraVioRos.h"
 
 #include <future>
 
@@ -25,9 +25,9 @@
 #include <kimera-vio/utils/Timer.h>
 
 // Dependencies from this repository
-#include "kimera_vio_ros/RosBagDataProvider.h"
-#include "kimera_vio_ros/RosDataProviderInterface.h"
-#include "kimera_vio_ros/RosOnlineDataProvider.h"
+#include "mono_hydra_vio_ros/RosBagDataProvider.h"
+#include "mono_hydra_vio_ros/RosDataProviderInterface.h"
+#include "mono_hydra_vio_ros/RosOnlineDataProvider.h"
 
 namespace VIO {
 

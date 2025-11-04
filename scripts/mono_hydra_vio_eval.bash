@@ -33,7 +33,7 @@ do
   for PARAM in "${PARAMS[@]}"
   do
     echo "RUNNING EVAL for params: $PARAM"
-    roslaunch kimera_vio_ros kimera_vio_ros_uhumans2.launch log_gt_data:=true use_lcd:=true online:=false dataset_name:="$PARAM" rosbag_path:="$ROSBAG_PATH"
+    roslaunch mono_hydra_vio_ros mono_hydra_vio_ros_uhumans2.launch log_gt_data:=true use_lcd:=true online:=false dataset_name:="$PARAM" rosbag_path:="$ROSBAG_PATH"
     mkdir -p "$OUTPUT_PATH/$ROSBAG/$PARAM"
     cp -r "$LOGS_PATH/$PARAM/" "$OUTPUT_PATH/$ROSBAG/$PARAM"
   done

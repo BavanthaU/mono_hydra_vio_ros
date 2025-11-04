@@ -1,6 +1,6 @@
 <launch>
-  <arg name="dataset_name" value="EurocMono"/>
-  <arg name="verbosity"    default="0" />
+  <arg name="dataset_name" value="ZEDXMono"/>
+  <arg name="verbosity"    default="2" />
   <arg name="do_coarse_temporal_sync" default="false"/>
   <arg name="do_fine_temporal_sync" default="false"/>
 
@@ -12,14 +12,11 @@
        the log_output_path location. -->
   <arg name="log_output" default="true"/>
   <arg name="log_output_path"
-    default="$(find kimera_vio_ros)/output_logs/$(arg dataset_name)"
+    default="$(find mono_hydra_vio_ros)/output_logs/$(arg dataset_name)"
        if="$(arg log_output)"/>
   <!-- Set to true and specify gt_topic if you want to log ground-truth data -->
   <arg name="log_gt_data" default="false"/>
   <arg name="gt_topic" default=""/>
-
-  <rosparam param="gt_gyro_bias"> [-0.002229, 0.0207, 0.07635] </rosparam>
-  <rosparam param="gt_accel_bias"> [-0.012492, 0.547666, 0.069073] </rosparam>
 
   <arg name="use_lcd"           default="true"/>
   <arg name="use_external_odom" default="false"/>
@@ -29,13 +26,22 @@
   <arg name="rosbag_path" default=""
     unless="$(arg online)"/>
 
+  <!-- Frame IDs -->
+  <arg name="odom_frame_id" default="world"/>
+  <arg name="map_frame_id" default="map"/>
+  <arg name="base_link_frame_id" default="base_link_kimera"/>
+  <arg name="left_cam_frame_id"  default="left_cam_kimera"/>
+  <arg name="right_cam_frame_id" default="right_cam_kimera"/>
+
+  <arg name="left_cam_topic"      default="/zed/zed_node/rgb/rect/image"/>
   <!-- Right camera topic not necessary -->
   <arg name="right_cam_topic"     default=""/>
-
-  <!-- Perform stereo dense reconstruction? -->
+  <arg name="imu_topic"           default="/zed/zed_node/imu/data"/>
+  <arg name="external_odom_topic" default=""/>
+   <!-- Perform stereo dense reconstruction? -->
   <arg name="run_stereo_dense"     default="false"/>
-
+  <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="dummy_tf_1" args="0.0 0.0 0.0 0.0 0.0 0.0 1.0 odom zed_camera_frame"/> -->
   <!-- Launch actual pipeline -->
-  <include file="$(find kimera_vio_ros)/launch/kimera_vio_ros_euroc.launch"
+  <include file="$(find mono_hydra_vio_ros)/launch/mono_hydra_vio_ros.launch"
     pass_all_args="true"/>
 </launch>

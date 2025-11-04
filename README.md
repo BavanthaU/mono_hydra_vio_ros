@@ -39,7 +39,7 @@ When you publish results with this fork, cite the Kimera papers and the Mono-Hyd
    known-good commits.
 2. Build the catkin workspace (`catkin build`).
 3. Launch one of the dataset-specific bring-up files, e.g.
-   `roslaunch mono_hydra_vio_ros kimera_vio_ros_realsense_rgbd.launch`.
+   `roslaunch mono_hydra_vio_ros mono_hydra_vio_ros_realsense_rgbd.launch`.
 
    > **Note:** Kimera-VIO-ROS logs frontend/backend summaries under
    > `mono_hydra_vio_ros/output_logs/<config_name>/`. If you introduce a new

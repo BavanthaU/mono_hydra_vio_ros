@@ -19,7 +19,7 @@
 #include <opencv2/opencv.hpp>
 #include <string>
 
-#include "kimera_vio_ros/RosPublishers.h"
+#include "mono_hydra_vio_ros/RosPublishers.h"
 
 namespace VIO {
 
